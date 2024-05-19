@@ -80,7 +80,7 @@ ul.list.mostrar {
   height: 600px;
 }
 .background {
-  background-image: url("/images/criptomoneda.jpg");
+  background-image: url("../images/criptomoneda.jpg");
   background-size: cover; /* Para ajustar la imagen al tamaño del contenedor */
   background-position: center; /* Para centrar la imagen */
   background-repeat: no-repeat;
@@ -261,7 +261,7 @@ hr {
   height: 10vh;
 }
 .coin {
-  background-image: url("/images/criptomoneda.jpg");
+  background-image: url("../images/criptomoneda.jpg");
   width: 100%;
   height: 100vh;
   background-size: cover; /* Para ajustar la imagen al tamaño del contenedor */
