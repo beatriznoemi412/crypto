@@ -542,7 +542,7 @@ label {
   }
   /*Index.html*/
   .background-title, .background-subtitle{
-    padding: 70px;
+    padding: 40px;
     text-shadow: 7px 7px 7px rgb(98, 107, 124);
   }
   .complete {
