@@ -516,7 +516,7 @@ label {
  /*Registrarse.html*/
  .register #form {
     width: 40%;
-    height: 90vh;
+    height: 100vh;
   }
   .register-title{
     font-size: 1rem;
@@ -593,7 +593,7 @@ label {
   /*CAPTCHA*/
  .register #form {
     width: 40%;
-    height: 100vh;
+    height: 120vh;
   }
   .register-title{
     font-size: 1.7rem;
