@@ -1,0 +1,611 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: linear-gradient(to bottom, #1c5371, #35374b, #78a083);
+  color: rgb(246, 242, 242);
+}
+/*Estilos del encabezado*/
+/* Header */
+#header {
+  background: linear-gradient(to bottom, #1f678e, #2f303f);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a{
+  color: white;
+  outline: none;
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+.logo-title-container{
+  text-align: center;
+}
+.logo {
+  width: 40px;
+  height: 30px;
+  border-radius: 80px;
+}
+.logo-title {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 3px 3px 3px rgb(157, 235, 239);
+  font-size: 1.2rem;
+}
+/*Barra de Navegación*/
+nav {
+  text-align: center;
+}
+.toggle {
+  display: flex;
+  align-items: center;
+}
+#btn-cerrar {
+  display: none;
+}
+#btn-abrir {
+  display: block; /* Asegura que el botón de abrir se muestre en dispositivos móviles */
+}
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+}
+ul.list.mostrar {
+  display: flex;
+}
+.item {
+  margin-bottom: 10px;
+}
+.item a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+/*MAIN INDEX.HTML*/
+#img {
+  max-width: 100%;
+  height: 600px;
+}
+.background {
+  background-image: url("/images/cryptocurrency.jpg");
+  background-size: cover; /* Para ajustar la imagen al tamaño del contenedor */
+  background-position: center; /* Para centrar la imagen */
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+.background-title {
+  padding: 30px;
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 6px 6px 6px rgb(13, 41, 75);
+}
+.background-subtitle {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  text-align: center;
+  text-shadow: 5px 5px 5px rgb(15, 58, 128);
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.complete {
+  background-color: #2c2d44;
+  font-size: 0.9rem;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.complete a {
+  color: white;
+  text-decoration: none;
+}
+.put:hover,
+.complete:hover {
+  background-color: #b3a027;
+  cursor: pointer;
+}
+.knowledge {
+  margin: 10px;
+}
+.subtitle {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.subtitle_cripto {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+.knowledge .box-inner {
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 100%;
+  margin: 5px;
+  font-size: .9rem;
+}
+/*CRIPTOMONEDAS*/
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin: 10px;
+}
+tbody {
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 3px;
+  text-align: left;
+  color: rgb(228, 225, 225);
+  font-size: 0.7rem;
+}
+.notes {
+  margin: 0 50px 20px 50px;
+}
+.notes_list {
+  padding: 10px;
+  list-style: none;
+}
+/*TENDENCIAS*/
+.subtitle-form {
+  text-align: center;
+  padding: 20px;
+}
+hr {
+  margin-top: 40px;
+  border: 1.3px solid #2b2c39;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+.input {
+  background-color: #2b2c39;
+  color: #2b2c39;
+}
+.searching {
+  text-align: center;
+}
+.search {
+  background-color: #2b2c39;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  padding: 10px;
+  border: solid 1px white;
+  margin: 5px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.image-container {
+  position: relative;
+  width: 40%;
+  height: 230px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-color: rgba(12, 53, 52, 0.5);
+  opacity: 0; /*inicialmente su opacidad es 0 (transparente) y luego una  (transition) para animar su cambio de opacidad a 1 cuando se produce el evento de clic.*/
+  transition: opacity 0.3s ease; /*duración de la transición en segundos, esa transición se realizará suavemente durante 0.3 segundos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+}
+.image-container:hover .overlay {
+  opacity: 1;
+}
+.currency {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 7px 7px #0c4e5d;
+  animation-name: stretch;
+  animation-duration: 4.5s;
+  animation-timing-function: ease-out; /* la animación comience rápidamente y se desacelere gradualmente al final.*/
+  animation-delay: 0;
+  animation-direction: alternate; /* alternate, la animación se ejecutará en una dirección y luego en la dirección opuesta en cada iteración. */
+  animation-fill-mode: none; /* none, los estilos volverán a su estado original una vez que la animación haya finalizado  */
+  animation-play-state: running; /*la animación se ejecutará cuando se cargue la página.*/
+}
+@keyframes stretch {
+  0% {
+    transform: scale(
+      0.3
+    ); /* el elemento tiene una escala del 30%, un fondo de #0c4e5d, y un radio de borde de 60%. Es decir, inicialmente el elemento es más pequeño, con un fondo y una forma redondeada.*/
+    background-color: #0c4e5d;
+    border-radius: 60%;
+  }
+  50% {
+    background-color: #0c4e5d; /*a la mitad de la animación el elemento mantiene su escala y forma, pero cambia su color de fondo.*/
+  }
+}
+/*Registrarse*/
+.header-register {
+  margin-left: 20px;
+  height: 10vh;
+}
+.coin {
+  background-image: url("/images/criptomoneda.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover; /* Para ajustar la imagen al tamaño del contenedor */
+  background-position: center; /* Para centrar la imagen */
+  background-repeat: no-repeat;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.register form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #1f678e, #2f303f);
+  gap: 10px;
+  width: 90%;
+  height: 88vh;
+  margin:0 auto;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+label {
+  color: rgb(198, 195, 195);
+}
+.linea-borde {
+  border: 1px solid;
+}
+.title {
+  font-weight: bold;
+  text-align: center;
+}
+.registration {
+  background: rgb(209, 221, 226);
+  border-radius: 10px;
+  border: solid 1px #36599f;
+  padding: 7px;
+  color: rgb(42, 41, 41);
+  width: 70%;
+  font-size: .8rem;
+}
+#captcha-input{
+  width: 30%;
+}
+.date {
+  color: rgb(35, 35, 35);
+}
+/*CAPTCHA*/
+#captcha-container {
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}
+.captcha {
+  filter: blur(1px); /* Aplica efecto de desenfoque */
+  animation: wave 1s infinite alternate; /* Aplica animación de onda */
+}
+/* Animación de onda */
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-10deg) scale(1.2); /* Mueve los caracteres hacia arriba y caracteres se rotarán en sentido contrario a las agujas del reloj en un ángulo de 10 grados y escalarán a un 20% más grande de su tamaño original*/
+  }
+  100% {
+    transform: translateY(0); /* Vuelve los caracteres a su posición original */
+  }
+}
+#send {
+  width: 20%;
+  color: white;
+  background-color: #1c5371;
+  border-radius: 10px;
+}
+#send:hover {
+  background-color: #b3a027;
+}
+/*FOOTER*/
+#footer-container {
+  background-image: linear-gradient(to bottom, #35374b, #1c5371);
+  width: 100%;
+  height: 10vh;
+}
+.footer-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+.footer-list,
+.footer-item a {
+  list-style: none;
+  color: white;
+  font-size: 0.6rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+@media only screen and (min-width: 320px) {
+  .coin{
+    height: 110vh;
+  }
+  .register-title{
+    font-size: .9rem;
+  }
+  #message {
+    color: blanco;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  tbody {
+    max-width: 70%;
+  }
+}
+/* Consulta de medios para pantallas de escritorio (min-width: 768px) en modo oscuro */
+@media only screen and (min-width: 768px) {
+  /*Header*/
+  #header {
+    height: 15vh;
+  }
+  /*Nav*/
+  .toggle {
+    display: none;
+  }
+  .list {
+    display: flex; /* Muestra los elementos de la lista de navegación en una fila en dispositivos de escritorio */
+    flex-direction: row;
+    list-style: none; /* Quita los estilos de viñeta */
+    padding: 0;
+    margin: 0;
+  }
+  .item {
+    margin-left: 20px;
+  }
+  /*Index.html-Main*/
+  .complete {
+    font-size: 0.9rem;
+    padding: 20px;
+    font-size: 1.3rem;
+  }
+  .background-title {
+    font-size: 2.5rem;
+  }
+  .background-subtitle{
+    font-size: 2.2rem;
+    padding: 15px;
+  }
+  .subtitle{
+    font-size: 1.5rem;
+  }
+  .knowledge {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px;
+    font-size: 1.3rem;
+  }
+  .knowledge .box {
+    flex-basis: calc(
+      30% - 10px
+    ); /*define el tamaño base de un elemento flexible en un contenedor Flex. La expresión calc()calcula el tamaño del elemento, que ocupará el 50% del espacio disponible en el contenedor menos 10 píxeles*/
+    margin-bottom: 20px;
+  }
+  p{
+    font-size: .9rem;
+  }
+  /*Monedas Virtuales*/
+  .table {
+    margin: 100px;
+  }
+  th,
+  td {
+    font-size: 1.3rem;
+  }
+  /*Tendencias.html*/
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+  }
+  .image-container {
+    position: relative;
+    width: calc(30% - 30px); 
+  }
+  /*Registrarse.html*/
+  .register form {
+    width: 40%;
+    height: 88vh;
+  }
+  .register-title{
+    font-size: .9rem;
+  }
+  #send {
+    padding: 5px;
+  }
+  /*Footer*/
+  .footer-list,
+  .footer-item a {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+ /*Nav*/
+  .item a{
+    font-size: 1.2rem;
+  }
+  /*Index.html-Main*/
+  .subtitle {
+    font-size: 1.6rem;
+    padding: 5px;
+  }
+   p, ol, li{
+    font-size: 1.3rem;
+  }
+  .knowledge .box {
+    flex-basis: calc(
+      40% - 10px
+    );
+  }
+  /*MonedasVirtuales.html*/
+  .table-subtitle {
+    font-size: 2rem;
+  }
+  th,
+  td {
+    font-size: 1.3rem;
+  }
+  tbody {
+    margin-left: 100px;
+  }
+ /*Registrarse.html*/
+ .register #form {
+    width: 40%;
+    height: 90vh;
+  }
+  .register-title{
+    font-size: 1rem;
+  }
+  input{
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /*MonedasVirtuales.html*/
+  tbody {
+    margin-left: 300px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  /*Nav*/
+  .logo{
+    width: 40px;
+    height: 40px;
+  }
+  .logo-title{
+    font-size: 1.5rem;
+  }
+  .item a {
+    font-size: 1.6rem;
+  }
+  /*Index.html*/
+  .background-title, .background-subtitle{
+    padding: 70px;
+    text-shadow: 7px 7px 7px rgb(98, 107, 124);
+  }
+  .complete {
+    font-size: 1.7rem;
+    padding: 10px;
+  }
+ 
+  .subtitle{
+    font-size: 1.5rem;
+  }
+  .knowledge p{
+    font-size: 1.2rem;
+  }
+  .knowledge .box {
+      flex-basis: calc(
+        35% - 10px
+      );
+  }
+  /*MonedasVirtuales.html*/
+  tbody {
+    margin-left: 400px;
+  }
+  .table-subtitle {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .crypto-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px;
+  }
+  .notes_list {
+    flex-basis: calc(
+      23% - 10px
+    ); /*define el tamaño base de un elemento flexible en un contenedor Flex. La expresión calc()calcula el tamaño del elemento, que ocupará el 50% del espacio disponible en el contenedor menos 10 píxeles*/
+    margin-bottom: 10px;
+    border: solid 1px white;
+    border-radius: 10px;
+  }
+  .registration {
+    padding: 20px;
+  }
+  /*registrarse.html*/
+  /*CAPTCHA*/
+ .register #form {
+    width: 40%;
+    height: 80vh;
+  }
+  .register-title{
+    font-size: 1.7rem;
+  }
+  input{
+    font-size: 1.2rem;
+    padding: 20px;
+  }
+  #send{
+    padding: 20px;
+  }
+  /*Footer*/
+  .footer-list,
+  .footer-item a {
+    font-size: 1.7rem;
+    margin: 15px;
+  }
+}

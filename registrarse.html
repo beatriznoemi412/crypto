@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Site</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="coin">
+    <header class="header-register">
+      <div class="logo-title-container">
+      
+      <a href="/index.html">
+        <img class="logo" src="images/logo.png" alt="Logo" />
+        <h1 class="logo-title">CRYPTO-SITE</h1>
+        <h3 id="home">Inicio</h3>
+      </a>
+      </div>
+    </header>
+    <main>
+      <section class="register">
+        <form id="form">
+          <h1 class="register-title">Registro</h1>
+          <input
+            class="registration"
+            type="text"
+            id="nombre"
+            name="nombre"
+            maxlength="15"
+            required
+            placeholder="Nombre"
+            pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+"
+            />
+          <input
+            class="registration"
+            type="text"
+            id="apellido"
+            name="apellido"
+            maxlength="15"
+            required
+            placeholder="Apellido"
+            pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+"
+          />
+          <input
+            class="registration"
+            type="number"
+            min="0"
+            max="99"
+            required
+            placeholder="Edad"
+            id="edad"
+          />
+          <input class="registration date" type="date" id="fech" />
+          <input
+            class="registration"
+            type="email"
+            name="email"
+            required
+            placeholder="nombre@dominio.com"
+            autocomplete="off"
+            id="email"
+          />
+          <select
+            class="registration"
+            id="pais-select"
+            placeholder="Pais"
+            required
+            name="pais-select"
+          >
+            <option value="0">País</option>
+            <option value="1">México</option>
+            <option value="2">Uruguay</option>
+            <option value="3">Argentina</option>
+            <option value="5">Chile</option>
+            <option value="6">Perú</option>
+            <option value="7">Brazil</option>
+            <option value="7">Otro</option>
+          </select>
+          <input type="checkbox" id="terminos" name="terminos" />
+          <label for="terminos">Acepto los términos y condiciones</label>
+          <div id="captcha-container" class="captcha"></div>
+          <input class="registration" type="text" id="captcha-input" required placeholder="Copia el Captcha"/>
+          </div>
+          <div id="message"></div>
+          <button id="send" type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+    <script type="text/javascript" src="js/captcha.js"></script>
+  </body>
+</html>
