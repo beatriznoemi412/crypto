@@ -286,7 +286,7 @@ hr {
   height: 88vh;
   margin:0 auto;
   border-radius: 20px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 label {
   color: rgb(198, 195, 195);
@@ -472,6 +472,9 @@ label {
   .register-title{
     font-size: .9rem;
   }
+  .registration{
+    padding: none;
+  }
   #send {
     padding: 5px;
   }
@@ -584,20 +587,20 @@ label {
     border-radius: 10px;
   }
   .registration {
-    padding: 20px;
+    padding: 15px;
   }
   /*registrarse.html*/
   /*CAPTCHA*/
  .register #form {
     width: 40%;
-    height: 80vh;
+    height: 100vh;
   }
   .register-title{
     font-size: 1.7rem;
   }
   input{
     font-size: 1.2rem;
-    padding: 20px;
+    padding: 15px;
   }
   #send{
     padding: 20px;
