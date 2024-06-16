@@ -3,11 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   background: linear-gradient(to bottom, #1c5371, #35374b, #78a083);
   color: rgb(246, 242, 242);
 }
+
 /*Estilos del encabezado*/
 /* Header */
 #header {
@@ -17,22 +19,27 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-a{
+
+a {
   color: white;
   outline: none;
   text-decoration: none;
 }
+
 a:focus {
   outline: none;
 }
-.logo-title-container{
+
+.logo-title-container {
   text-align: center;
 }
+
 .logo {
   width: 40px;
   height: 30px;
   border-radius: 80px;
 }
+
 .logo-title {
   margin-left: 10px;
   font-size: 1.2rem;
@@ -42,20 +49,25 @@ a:focus {
   text-shadow: 3px 3px 3px rgb(157, 235, 239);
   font-size: 1.2rem;
 }
+
 /*Barra de Navegación*/
 nav {
   text-align: center;
 }
+
 .toggle {
   display: flex;
   align-items: center;
 }
+
 #btn-cerrar {
   display: none;
 }
+
 #btn-abrir {
   display: block; /* Asegura que el botón de abrir se muestre en dispositivos móviles */
 }
+
 .list {
   list-style-type: none;
   padding: 0;
@@ -63,22 +75,27 @@ nav {
   display: none;
   flex-direction: column;
 }
+
 ul.list.mostrar {
   display: flex;
 }
+
 .item {
   margin-bottom: 10px;
 }
+
 .item a {
   text-decoration: none;
   color: white;
   font-size: 1rem;
 }
+
 /*MAIN INDEX.HTML*/
 #img {
   max-width: 100%;
   height: 600px;
 }
+
 .background {
   background-image: url("../images/criptomoneda.jpg");
   background-size: cover; /* Para ajustar la imagen al tamaño del contenedor */
@@ -86,6 +103,7 @@ ul.list.mostrar {
   background-repeat: no-repeat;
   height: 90vh;
 }
+
 .background-title {
   padding: 30px;
   font-size: 1.7rem;
@@ -93,18 +111,21 @@ ul.list.mostrar {
   text-align: center;
   text-shadow: 6px 6px 6px rgb(13, 41, 75);
 }
+
 .background-subtitle {
   margin-top: 10px;
   font-size: 1.3rem;
   text-align: center;
   text-shadow: 5px 5px 5px rgb(15, 58, 128);
 }
+
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
 }
+
 .complete {
   background-color: #2c2d44;
   font-size: 0.9rem;
@@ -113,36 +134,43 @@ ul.list.mostrar {
   margin-left: 20px;
   cursor: pointer;
 }
+
 .complete a {
   color: white;
   text-decoration: none;
 }
+
 .put:hover,
 .complete:hover {
   background-color: #b3a027;
   cursor: pointer;
 }
+
 .knowledge {
   margin: 10px;
 }
+
 .subtitle {
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
 }
+
 .subtitle_cripto {
   font-size: 1rem;
   font-weight: bolder;
 }
+
 .knowledge .box-inner {
   padding: 25px;
   border: 1px solid #ccc;
   border-radius: 10px;
   height: 100%;
   margin: 5px;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
+
 /*CRIPTOMONEDAS*/
 .table {
   display: flex;
@@ -150,63 +178,94 @@ ul.list.mostrar {
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  margin: 10px;
 }
+
+.table-subtitle {
+  padding: 30px;
+}
+
 tbody {
   border-collapse: collapse;
 }
-th,
-td {
+
+th,td {
   border: 1px solid #ccc;
   padding: 3px;
   text-align: left;
   color: rgb(228, 225, 225);
-  font-size: 0.7rem;
+  font-size: 0.6rem;
 }
+
 .notes {
   margin: 0 50px 20px 50px;
 }
+
 .notes_list {
   padding: 10px;
   list-style: none;
 }
+
+.editando td {
+  padding: 0;
+}
+
+.editando input {
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.table-form {
+  padding: 40px;
+}
+
+#mensaje {
+  color: rgb(251, 251, 15);
+}
+
 /*TENDENCIAS*/
 .subtitle-form {
   text-align: center;
   padding: 20px;
 }
+
 hr {
   margin-top: 40px;
   border: 1.3px solid #2b2c39;
   margin-left: 80px;
   margin-right: 80px;
 }
+
 .input {
   background-color: #2b2c39;
   color: #2b2c39;
 }
+
 .searching {
   text-align: center;
 }
+
 .search {
   background-color: #2b2c39;
   color: white;
   font-size: 1.1rem;
   border-radius: 25px;
-  padding: 10px;
+  padding: 7px;
   border: solid 1px white;
   margin: 5px;
 }
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .image-container {
   position: relative;
   width: 40%;
   height: 230px;
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -220,15 +279,18 @@ hr {
   justify-content: center;
   align-items: center;
 }
+
 .text {
   color: white;
   font-size: 16px;
   text-align: center;
   padding: 10px;
 }
+
 .image-container:hover .overlay {
   opacity: 1;
 }
+
 .currency {
   width: 100%;
   height: 200px;
@@ -243,6 +305,7 @@ hr {
   animation-fill-mode: none; /* none, los estilos volverán a su estado original una vez que la animación haya finalizado  */
   animation-play-state: running; /*la animación se ejecutará cuando se cargue la página.*/
 }
+
 @keyframes stretch {
   0% {
     transform: scale(
@@ -255,11 +318,13 @@ hr {
     background-color: #0c4e5d; /*a la mitad de la animación el elemento mantiene su escala y forma, pero cambia su color de fondo.*/
   }
 }
+
 /*Registrarse*/
 .header-register {
   margin-left: 20px;
   height: 10vh;
 }
+
 .coin {
   background-image: url("../images/criptomoneda.jpg");
   width: 100%;
@@ -268,6 +333,7 @@ hr {
   background-position: center; /* Para centrar la imagen */
   background-repeat: no-repeat;
 }
+
 #form {
   display: flex;
   flex-direction: column;
@@ -275,6 +341,7 @@ hr {
   align-content: center;
   text-align: center;
 }
+
 .register form {
   display: flex;
   flex-direction: column;
@@ -284,20 +351,24 @@ hr {
   gap: 10px;
   width: 90%;
   height: 88vh;
-  margin:0 auto;
+  margin: 0 auto;
   border-radius: 20px;
   margin-top: 20px;
 }
+
 label {
   color: rgb(198, 195, 195);
 }
+
 .linea-borde {
   border: 1px solid;
 }
+
 .title {
   font-weight: bold;
   text-align: center;
 }
+
 .registration {
   background: rgb(209, 221, 226);
   border-radius: 10px;
@@ -305,14 +376,21 @@ label {
   padding: 7px;
   color: rgb(42, 41, 41);
   width: 70%;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
-#captcha-input{
+
+#captcha-input {
   width: 30%;
 }
+
 .date {
   color: rgb(35, 35, 35);
 }
+
+#message {
+  color: red;
+}
+
 /*CAPTCHA*/
 #captcha-container {
   color: white;
@@ -321,10 +399,12 @@ label {
   color: white;
   text-align: center;
 }
+
 .captcha {
   filter: blur(1px); /* Aplica efecto de desenfoque */
   animation: wave 1s infinite alternate; /* Aplica animación de onda */
 }
+
 /* Animación de onda */
 @keyframes wave {
   0% {
@@ -337,27 +417,32 @@ label {
     transform: translateY(0); /* Vuelve los caracteres a su posición original */
   }
 }
+
 #send {
   width: 20%;
   color: white;
   background-color: #1c5371;
   border-radius: 10px;
 }
+
 #send:hover {
   background-color: #b3a027;
 }
+
 /*FOOTER*/
 #footer-container {
   background-image: linear-gradient(to bottom, #35374b, #1c5371);
   width: 100%;
   height: 10vh;
 }
+
 .footer-section {
   display: flex;
   justify-content: space-around;
   align-items: center;
   align-content: center;
 }
+
 .footer-list,
 .footer-item a {
   list-style: none;
@@ -369,13 +454,16 @@ label {
   justify-content: space-between;
   margin: 5px;
 }
+
 @media only screen and (min-width: 320px) {
-  .coin{
+  .coin {
     height: 110vh;
   }
-  .register-title{
-    font-size: .9rem;
+
+  .register-title {
+    font-size: 0.9rem;
   }
+
   #message {
     color: blanco;
   }
@@ -388,6 +476,7 @@ label {
     align-content: center;
     align-items: center;
   }
+
   tbody {
     max-width: 70%;
   }
@@ -398,10 +487,12 @@ label {
   #header {
     height: 15vh;
   }
+
   /*Nav*/
   .toggle {
     display: none;
   }
+
   .list {
     display: flex; /* Muestra los elementos de la lista de navegación en una fila en dispositivos de escritorio */
     flex-direction: row;
@@ -409,25 +500,31 @@ label {
     padding: 0;
     margin: 0;
   }
+
   .item {
     margin-left: 20px;
   }
+
   /*Index.html-Main*/
   .complete {
     font-size: 0.9rem;
     padding: 20px;
     font-size: 1.3rem;
   }
+
   .background-title {
     font-size: 2.5rem;
   }
-  .background-subtitle{
+
+  .background-subtitle {
     font-size: 2.2rem;
     padding: 15px;
   }
-  .subtitle{
+
+  .subtitle {
     font-size: 1.5rem;
   }
+
   .knowledge {
     display: flex;
     flex-wrap: wrap;
@@ -435,23 +532,27 @@ label {
     margin: 10px;
     font-size: 1.3rem;
   }
+
   .knowledge .box {
     flex-basis: calc(
       30% - 10px
     ); /*define el tamaño base de un elemento flexible en un contenedor Flex. La expresión calc()calcula el tamaño del elemento, que ocupará el 50% del espacio disponible en el contenedor menos 10 píxeles*/
     margin-bottom: 20px;
   }
-  p{
-    font-size: .9rem;
+
+  p {
+    font-size: 0.9rem;
   }
+
   /*Monedas Virtuales*/
   .table {
     margin: 100px;
   }
-  th,
-  td {
-    font-size: 1.3rem;
+
+  th, td {
+    font-size: 1rem;
   }
+
   /*Tendencias.html*/
   .gallery {
     display: flex;
@@ -460,124 +561,148 @@ label {
     align-content: center;
     align-items: center;
   }
+
   .image-container {
     position: relative;
-    width: calc(30% - 30px); 
+    width: calc(30% - 30px);
   }
+
   /*Registrarse.html*/
   .register form {
     width: 40%;
     height: 88vh;
   }
-  .register-title{
-    font-size: .9rem;
+
+  .register-title {
+    font-size: 0.9rem;
   }
-  .registration{
+
+  .registration {
     padding: none;
   }
+
   #send {
     padding: 5px;
   }
+
   /*Footer*/
   .footer-list,
   .footer-item a {
     font-size: 1.2rem;
   }
 }
+
 @media only screen and (min-width: 1024px) {
- /*Nav*/
-  .item a{
+  /*Nav*/
+  .item a {
     font-size: 1.2rem;
   }
+
   /*Index.html-Main*/
   .subtitle {
     font-size: 1.6rem;
     padding: 5px;
   }
-   p, ol, li{
+
+  p, ol, li {
     font-size: 1.3rem;
   }
+
   .knowledge .box {
-    flex-basis: calc(
-      40% - 10px
-    );
+    flex-basis: calc(40% - 10px);
   }
+
   /*MonedasVirtuales.html*/
   .table-subtitle {
     font-size: 2rem;
   }
-  th,
-  td {
-    font-size: 1.3rem;
+
+  th, td {
+    font-size: 1rem;
   }
+
   tbody {
     margin-left: 100px;
   }
- /*Registrarse.html*/
- .register #form {
+
+  /*Registrarse.html*/
+  .register #form {
     width: 40%;
     height: 100vh;
   }
-  .register-title{
+
+  .register-title {
     font-size: 1rem;
   }
-  input{
-    font-size: 1.2rem;
+
+  input {
+    font-size: 1rem;
   }
 }
+
 @media only screen and (min-width: 1200px) {
   /*MonedasVirtuales.html*/
   tbody {
     margin-left: 300px;
   }
 }
+
 @media only screen and (min-width: 1440px) {
   /*Nav*/
-  .logo{
+  .logo {
     width: 40px;
     height: 40px;
   }
-  .logo-title{
+
+  .logo-title {
     font-size: 1.5rem;
   }
+
   .item a {
     font-size: 1.6rem;
   }
+
   /*Index.html*/
-  .background-title, .background-subtitle{
+  .background-title,
+  .background-subtitle {
     padding: 40px;
     text-shadow: 7px 7px 7px rgb(98, 107, 124);
   }
+
   .complete {
     font-size: 1.7rem;
     padding: 10px;
   }
- 
-  .subtitle{
+
+  .subtitle {
     font-size: 1.5rem;
   }
-  .knowledge p{
+
+  .knowledge p {
     font-size: 1.2rem;
   }
+
   .knowledge .box {
-      flex-basis: calc(
-        35% - 10px
-      );
+    flex-basis: calc(35% - 10px);
   }
+
   /*MonedasVirtuales.html*/
   tbody {
     margin-left: 400px;
   }
+
   .table-subtitle {
     font-size: 2rem;
     margin-bottom: 10px;
   }
+
   .crypto-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 10px;
   }
+
   .notes_list {
     flex-basis: calc(
       23% - 10px
@@ -586,25 +711,31 @@ label {
     border: solid 1px white;
     border-radius: 10px;
   }
+
   .registration {
     padding: 15px;
   }
+
   /*registrarse.html*/
   /*CAPTCHA*/
- .register #form {
+  .register #form {
     width: 40%;
     height: 120vh;
   }
-  .register-title{
+
+  .register-title {
     font-size: 1.7rem;
   }
-  input{
+
+  input {
     font-size: 1.2rem;
     padding: 15px;
   }
-  #send{
+
+  #send {
     padding: 20px;
   }
+
   /*Footer*/
   .footer-list,
   .footer-item a {

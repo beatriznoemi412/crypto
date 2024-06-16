@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Site</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body class="body">
+  <header id="header">
+    <div class="logo-title-container">
+      <a href="../index.html">
+        <img class="logo" src="../images/logo.png" alt="Logo" />
+        <h1 class="logo-title">CRYPTO-SITE</h1>
+      </a>
+    </div>
+    <div class="toggle">
+      <button id="btn-abrir" class="open">
+        <img src="images/menu-de-hamburguesas.png" alt="menú hamburguesa" />
+      </button>
+      <button id="btn-cerrar" class="span-x"><span>X</span></button>
+    </div>
+    <nav id="list-nav">
+      <ul class="list">
+        <li class="item"><a href="../index.html">Inicio</a></li>
+        <li class="item">
+          <a href="../pages/criptomonedas.html">Criptomonedas</a>
+        </li>
+        <li class="item">
+          <a href="../pages/tendencias.html">Tendencias</a>
+        </li>
+        <li class="item">
+          <a href="../pages/registrarse.html">Registrarse</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="background">
+      <h1 class="background-title">Las Criptomonedas Más importantes.</h1>
+      <h2 class="background-subtitle">La mejor información.</h2>
+      <h2 class="background-subtitle">
+        En un solo lugar y a tu disposición.
+      </h2>
+    </section>
+
+    <section class="table">
+      <h2 class="table-subtitle">Monedas Virtuales que son Tendencia :</h2>
+
+      <div class="filtro">
+        <label for="filtro">Filtrar por:</label>
+        <input type="text" id="filtro" class="search" placeholder="Buscar por nombre o símbolo..." />
+
+        <button id="btn-borrar-filtro" class="search">Borrar Filtro</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Moneda</th>
+            <th>Símbolo</th>
+            <th>Tipo</th>
+            <th>Algoritmo (*)</th>
+            <th>Fecha de Creación</th>
+          </tr>
+        </thead>
+        <tbody id="tabla">
+          <!-- Las filas de criptomonedas se insertarán aquí -->
+        </tbody>
+      </table>
+      <div class="table-form">
+        <h1>Gestión de Criptomonedas</h1>
+
+        <form id="crypto-form" class="searching">
+          <input class="input search" type="hidden" id="crypto-id" name="id" />
+
+          <label for="nombre">Nombre:</label>
+          <input class="input search" type="text" id="nombre" name="nombre" required /><br />
+
+          <label for="simbolo">Símbolo:</label>
+          <input class="input search" type="text" id="simbolo" name="simbolo" required /><br />
+
+          <label for="tipo">Tipo:</label>
+          <input class="input search" type="text" id="tipo" name="tipo" required /><br />
+
+          <label for="algoritmo">Algoritmo:</label>
+          <input class="input search" type="text" id="algoritmo" name="algoritmo" required /><br />
+
+          <label for="fechaCreacion">Fecha de Creación:</label>
+          <input class="input search" type="date" id="fechaCreacion" name="fechaCreacion" required /><br />
+
+          <button class="search put" type="submit" id="agregar-btn"> Agregar</button>
+        </form>
+      </div>
+      <div id="mensaje"></div>
+    </section>
+    <section class="notes">
+      <h4 class="subtitle_two knowledge">(*)Notas:</h4>
+      <ul class="crypto-list">
+        <li class="notes_list">
+          Para aquellos interesados en la minería de criptomonedas, el
+          conocimiento del algoritmo es crucial. Cada algoritmo tiene
+          requisitos de hardware y consumo energético diferentes, lo que
+          afecta la rentabilidad y viabilidad de la minería.
+        </li>
+        <li class="notes_list">
+          Red de almacenamiento: en el contexto de la tecnología blockchain y
+          las criptomonedas, se refiere a una infraestructura descentralizada
+          que permite almacenar datos de manera distribuida y segura a través
+          de múltiples nodos en la red, que se utiliza para el almacenamiento
+          de datos digitales de forma transparente y altamente segura. En el
+          caso de Filecoin, es una criptomoneda que está asociada con una red
+          de almacenamiento descentralizado.
+        </li>
+        <li class="notes_list">
+          Protocolo de intercambio descentralizado (DEX, por sus siglas en
+          inglés) es un sistema que permite a los usuarios intercambiar
+          activos digitales (como criptomonedas) directamente entre sí, sin la
+          necesidad de un intermediario centralizado como una bolsa de valores
+          tradicional. Esto se logra a través de la tecnología blockchain y
+          contratos inteligentes.
+        </li>
+        <li class="notes_list">
+          Oracle: En el contexto de las blockchains, un Oracle es un servicio
+          o entidad que proporciona información del mundo real a una
+          blockchain. Esta información puede incluir precios de activos
+          financieros, datos meteorológicos, resultados de eventos deportivos,
+          entre otros.
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer id="footer-container">
+    <section class="footer-section">
+      <div id="logo">
+        <a href="../index.html">
+          <img class="logo" src="../images/logo.png" alt="Logo" />
+          <h1 class="logo-title">CRYPTO-SITE</h1>
+        </a>
+      </div>
+
+      <ul class="footer-list">
+        <li class="footer-item"><a href="">Términos y condiciones</a></li>
+        <li class="footer-item"><a href="">Preguntas frecuentes</a></li>
+        <li class="footer-item"><a href="">Ayuda</a></li>
+      </ul>
+    </section>
+  </footer>
+  <!-- <script type="text/javascript" src="/js/nav.js"></script>-->
+  <script type="text/javascript" src="/js/api.js"></script>
+
+</body>
+
+</html>
