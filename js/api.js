@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
       console.log("La página está bien");
       mostrarTabla(datos);
-
+      mostrarEstadoActual(); // Mostrar estado actual de los datos
       // Manejar el evento de envío del formulario
       formAgregar.addEventListener("submit", async function (e) {
         e.preventDefault();
@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           formAgregar.reset();
           datos = await obtenerDatosCriptos(); // Obtener datos actualizados
           mostrarTabla(datos); // Mostrar la tabla actualizada
+          mostrarEstadoActual(); // Mostrar estado actual de los dato
         } catch (error) {
           console.error("Error al agregar la criptomoneda:", error);
         }
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           await eliminarCriptomoneda(id);
           datos = await obtenerDatosCriptos(); // Obtener datos actualizados
           mostrarTabla(datos); // Mostrar la tabla actualizada
+          mostrarEstadoActual(); // Mostrar estado actual de los datos
         } else if (event.target.classList.contains('editar-btn')) {
           editarFila(event.target, datos);
         }
@@ -166,15 +168,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   function editarFila(boton) {
     let fila = boton.parentElement.parentElement; // Acceder al elemento <tr> que contiene el botón y a los td que contiene cada tr
 
-    if (!fila.classList.contains("editando")) {
-      let datosOriginales = Array.from(fila.children).map((td) => td.textContent);
+    if (!fila.classList.contains("editando")) {//Verifica si la fila no tiene la clase editando. Esto asegura que solo se permita la edición si la 
+      //fila no está ya en modo edición.
+      let datosOriginales = Array.from(fila.children).map((td) => td.textContent);//Crea un array 
+      //datosOriginales que contiene el texto de cada <td> de la fila. Utiliza Array.from para 
+      //convertir los hijos de la fila (que son nodos <td>) en un array y  map para obtener el texto de cada <td>.
 
+      //bloque de código reemplaza el contenido de la fila con inputs de texto (<input type="text">) para cada dato original.
       fila.innerHTML = `
         <td><input type="text" name="campo-uno" value="${datosOriginales[0]}"></td>
         <td><input type="text" name="campo-dos" value="${datosOriginales[1]}"></td>
         <td><input type="text" name="campo-tres" value="${datosOriginales[2]}"></td>
         <td><input type="text" name="campo-cuatro" value="${datosOriginales[3]}"></td>
-        <td><input type="text" name="campo-c" value="${datosOriginales[4]}"></td>
+        <td><input type="text" name="campo-cinco" value="${datosOriginales[4]}"></td>
         <td>
           <button class="guardar-btn" data-id="${boton.dataset.id}">Guardar</button>
         </td>
@@ -247,13 +253,22 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function mostrarMensaje(mensaje, tipo) {
-    const divMensaje = document.createElement("div");
-    divMensaje.classList.add(tipo);
-    divMensaje.textContent = mensaje;
-    document.body.appendChild(divMensaje);
+    const mensajeCompleto = `${tipo.toUpperCase()}: ${mensaje}`;
+    const mensajeDiv = document.getElementById("mensaje"); // Suponiendo que tengas un elemento <div> con id "mensaje"
+
+    mensajeDiv.textContent = mensajeCompleto;
 
     setTimeout(() => {
-      divMensaje.remove();
+        mensajeDiv.textContent = ''; // Limpiar el contenido después de cierto tiempo
     }, 3000);
+}
+
+  async function mostrarEstadoActual() {
+    try {
+      let datos = await obtenerDatosCriptos();
+      console.log("Estado actual de los datos:", datos);
+    } catch (error) {
+      console.error("Error al obtener el estado actual de los datos:", error);
+    }
   }
 });
