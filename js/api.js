@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       // Manejar eventos de eliminar y editar
       tabla.addEventListener('click', async (event) => {
-        const id = event.target.getAttribute('data-id');//target se usa para identificar el elemento específico dentro de la tabla que fue clicado. Atributo data-id que corresponde al ID de una criptomoneda
+        const id = event.target.getAttribute('data-id');//target identifica el elemento específico dentro de la tabla que fue clicado. Atributo data-id que corresponde al ID de una criptomoneda
         if (event.target.classList.contains('eliminar-btn')) {
           await eliminarCriptomoneda(id);
           datos = await obtenerDatosCriptos(); // Obtener datos actualizados
