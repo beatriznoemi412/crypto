@@ -254,14 +254,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function mostrarMensaje(mensaje, tipo) {
     const mensajeCompleto = `${tipo.toUpperCase()}: ${mensaje}`;//Plantilla literal en vez de usar concatenacion de cadenas
-    const mensajeDiv = document.getElementById("mensaje"); 
+    const mensajeDiv = document.getElementById("mensaje");
 
     mensajeDiv.textContent = mensajeCompleto;
 
     setTimeout(() => {
-        mensajeDiv.textContent = ''; // Limpiar el contenido después de cierto tiempo
+      mensajeDiv.textContent = ''; // Limpiar el contenido después de cierto tiempo
     }, 3000);
-}
+  }
 
   async function mostrarEstadoActual() {
     try {

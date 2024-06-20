@@ -172,10 +172,12 @@ ul.list.mostrar {
 }
 
 /*CRIPTOMONEDAS*/
+
 .table {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
   align-items: center;
   max-width: 100%;
 }
@@ -186,6 +188,11 @@ ul.list.mostrar {
 
 tbody {
   border-collapse: collapse;
+}
+
+#btn-borrar-filtro{
+  font-size: .7rem;
+  
 }
 
 th,td {
@@ -544,9 +551,15 @@ label {
     font-size: 0.9rem;
   }
 
-  /*Monedas Virtuales*/
+  /*criptomonedas.html*/
+
   .table {
     margin: 100px;
+  }
+
+  #btn-borrar-filtro{
+    font-size: 1rem;
+    
   }
 
   th, td {
