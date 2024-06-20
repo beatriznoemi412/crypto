@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       // Manejar eventos de eliminar y editar
       tabla.addEventListener('click', async (event) => {
-        const id = event.target.getAttribute('data-id');
+        const id = event.target.getAttribute('data-id');//target se usa para identificar el elemento específico dentro de la tabla que fue clicado. Atributo data-id que corresponde al ID de una criptomoneda
         if (event.target.classList.contains('eliminar-btn')) {
           await eliminarCriptomoneda(id);
           datos = await obtenerDatosCriptos(); // Obtener datos actualizados
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function filtrarTabla(valorFiltro, datos) {
-    const datosFiltrados = datos.filter(
+    const datosFiltrados = datos.filter(//igual que map(), filter() devuelve un nuevo array y no cambia el array original.
       (cripto) =>
         cripto.nombre.toLowerCase().includes(valorFiltro) ||
         cripto.simbolo.toLowerCase().includes(valorFiltro) ||
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (!fila.classList.contains("editando")) {//Verifica si la fila no tiene la clase editando. Esto asegura que solo se permita la edición si la 
       //fila no está ya en modo edición.
-      let datosOriginales = Array.from(fila.children).map((td) => td.textContent);//Crea un array 
+      let datosOriginales = Array.from(fila.children).map((td) => td.textContent);//Crea un array (map)
       //datosOriginales que contiene el texto de cada <td> de la fila. Utiliza Array.from para 
       //convertir los hijos de la fila (que son nodos <td>) en un array y  map para obtener el texto de cada <td>.
 
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       fechaCreacion: inputs[4].value,
     };
 
-    fetch(`${apiUrl}/${boton.dataset.id}`, {
+    fetch(`${apiUrl}/${boton.dataset.id}`, {// atributo data-* en el HTML se convierte en una propiedad del objeto dataset.
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -253,8 +253,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function mostrarMensaje(mensaje, tipo) {
-    const mensajeCompleto = `${tipo.toUpperCase()}: ${mensaje}`;
-    const mensajeDiv = document.getElementById("mensaje"); // Suponiendo que tengas un elemento <div> con id "mensaje"
+    const mensajeCompleto = `${tipo.toUpperCase()}: ${mensaje}`;//Plantilla literal en vez de usar concatenacion de cadenas
+    const mensajeDiv = document.getElementById("mensaje"); 
 
     mensajeDiv.textContent = mensajeCompleto;
 
