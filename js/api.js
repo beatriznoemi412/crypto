@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     let datos = await obtenerDatosCriptos();
     if (!tabla || !inputFiltro || !formAgregar || !Array.isArray(datos)) {
       console.error("Error al inicializar la página.");
-      return;
     } else {
       console.log("La página está bien");
       mostrarTabla(datos);
@@ -112,13 +111,16 @@ document.addEventListener('DOMContentLoaded', async () => {
   // METODO GET
   async function obtenerDatosCriptos() {
     try {
+      // Realiza la solicitud a la API
       let respuesta = await fetch(apiUrl);
       if (!respuesta.ok) {
         throw new Error('Error al obtener los datos de la API');
       }
+      // Retorna los datos en formato JSON
       return await respuesta.json();
     } catch (error) {
       console.error("Error en obtenerDatosCriptos:", error);
+      // Retorna un arreglo vacío en caso de error
       return [];
     }
   }
